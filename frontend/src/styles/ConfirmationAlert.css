@@ -1,0 +1,110 @@
+/* Overlay */
+.custom-alert-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Alert Box */
+  .custom-alert {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 420px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    animation: fadeIn 0.3s ease-out;
+    position: relative;
+  }
+
+  .custom-alert-header h2::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    background: #27ae60;
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 2px;
+  }
+  
+  /* Alert Header */
+  .custom-alert-header h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 20px;
+  }
+  
+  /* Alert Body */
+  .custom-alert-body p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  
+  /* Alert Footer */
+  .custom-alert-footer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  /* Confirm Button */
+  .alert-confirm-btn {
+    background: linear-gradient(135deg, #4caf50, #81c784);
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.4);
+  }
+  
+  .alert-confirm-btn:hover {
+    background: linear-gradient(135deg, #67dd6b, #53f15b);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(76, 175, 80, 0.5);
+  }
+  
+  /* Cancel Button */
+  .alert-cancel-btn {
+    background: linear-gradient(135deg, #ff7e5f, #ee6847);
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(244, 67, 54, 0.4);
+  }
+  
+  .alert-cancel-btn:hover {
+    background: linear-gradient(135deg, #ff947e, #ff8465);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(244, 67, 54, 0.5);
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.85);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  

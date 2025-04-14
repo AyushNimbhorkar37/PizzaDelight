@@ -1,0 +1,197 @@
+
+.menu-container {
+  width: 90%;
+  max-width: 1300px;
+  margin: 110px auto 50px;
+  padding: 40px 30px;
+  background: linear-gradient(to right, #f9fafb, #e2e8f0);
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  margin-bottom: 80px;
+  animation: fadeIn 0.6s ease-in-out;
+
+}
+
+.menu-title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.menu-title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #27ae60;
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* Pizza list grid */
+.pizza-list-menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 35px;
+  justify-items: center;
+}
+
+/* Card for each pizza */
+.pizza-card-menu {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.pizza-card-menu:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
+}
+
+/* Pizza image */
+.pizza-image-menu {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.pizza-card-menu:hover .pizza-image-menu {
+  transform: scale(1.05);
+}
+
+/* Pizza information section */
+.pizza-info-menu {
+  padding: 22px;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Pizza name */
+.pizza-name-menu {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #222;
+  margin: 15px 0 10px;
+}
+
+/* Pizza price */
+.pizza-price-menu {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #e84118;
+  margin-bottom: 20px;
+}
+
+/* Customization options */
+.customization-options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.customization-options label {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #555;
+  font-weight: 500;
+}
+
+.customization-options select {
+  padding: 10px 12px;
+  font-size: 1rem;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  width: 100%;
+  background-color: #fafafa;
+  transition: border 0.3s ease;
+}
+
+.customization-options select:focus {
+  border: 1px solid #27ae60;
+  outline: none;
+}
+
+/* Veggie options checkboxes */
+.veggie-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.veggie-options label {
+  font-size: 0.95rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.veggie-options input {
+  accent-color: #27ae60;
+}
+
+/* Add to Cart button & View Cart button */
+.add-to-cart-btn,
+.view-cart-btn {
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 220px;
+  margin: 12px auto 0;
+  display: block;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.add-to-cart-btn:hover,
+.view-cart-btn:hover {
+  background: linear-gradient(135deg, #219150, #27ae60);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 18px rgba(13, 245, 110, 0.35);
+}
+
+/* View Cart section container */
+.view-cart {
+  max-width: 1240px;
+  margin: 50px auto 0;
+  padding: 25px;
+  background: linear-gradient(to right, #f9fafb, #e2e8f0);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

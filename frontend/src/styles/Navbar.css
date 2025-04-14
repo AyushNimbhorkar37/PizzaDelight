@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #ef4444, #f87171);
+  padding: 0 40px;
+  color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 85px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  
+  transition: box-shadow 0.3s ease;
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 38px; 
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  color: #ffffff;  
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.logo:hover {
+  color: #ffc800;  
+  transform: scale(1.1);  
+}
+
+/* Navbar Links Styling */
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;  
+}
+
+.nav-btns {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 18px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-btns:hover{
+  background: linear-gradient(135deg, #dd4949, #ef5c5c);
+  transform: scale(1.07);
+  box-shadow: 0 8px 16px rgba(239, 68, 68, 0.887);
+}
+
+/* Admin Login Button */
+.Log-btn {
+  background: linear-gradient(120deg, #ff7979, #ff4f4f);
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin-right: 45px;
+}
+
+.Log-btn:hover {
+  background: linear-gradient(130deg, #ff7979b6, #ff4f4fc2);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.118);
+}
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+    height: 70px;  
+  }
+
+  .logo {
+    font-size: 32px;  
+  }
+
+  .nav-links {
+    display: none;  
+  }
+
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 15px;
+    width: 100%;  
+  }
+
+  .Log-btn {
+    margin-left: 0;  
+    width: 100%;  
+    padding: 14px 0; 
+  }
+}
